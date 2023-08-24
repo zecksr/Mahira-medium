@@ -10,7 +10,7 @@ Terraform installed on your local machine. You can download Terraform from the o
 ## Steps to Create IAM Role
 
 Clone this repository to your local machine:
-git clone https://github.com/yourusername/terraform-ec2-iam-role.git
+git clone https://github.com/MahiraTechnology/Mahira-medium.git
 
 Navigate to the repository's directory:
 cd iam-ec2
