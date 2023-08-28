@@ -3,11 +3,11 @@
 This repository provides a guide and Terraform code to automate the deployment of AWS Amplify applications, simplifying the process of scalable development. By utilizing Terraform, Infrastructure as Code (IaC), and the capabilities of AWS Amplify, you can easily manage and automate the deployment lifecycle of your applications.
 
 ## Table of Contents
-Introduction 
-Prerequisites 
-Getting Started 
-Terraform Configuration 
-Deployment Workflow  
+Introduction,
+Prerequisites,
+Getting Started,
+Terraform Configuration,
+Deployment Workflow,
 Cleaning Up
 
 ##  Introduction
