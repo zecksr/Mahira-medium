@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  name: delete-workflows
+  namespace: argo
+spec:
+  entrypoint: main
+  templates:
+    - name: main
+      steps:
+        - - name: delete-workflows
+            template: delete-workflows
+    - name: delete-workflows
+      container:
+        image: "12346789.dkr.ecr.ca-central-1.amazonaws.com/argo-workflows:latest"
+        command: ["python", "script.py"]
