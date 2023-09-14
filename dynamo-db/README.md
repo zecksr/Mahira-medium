@@ -32,7 +32,7 @@ You can use the AWS Management Console, AWS CLI, or any other preferred method t
 Open your terminal.
 Navigate to the directory containing the CloudFormation template and parameters file.
 Use the following AWS CLI command to create the stack:
-aws cloudformation create-stack --stack-name YourDynamoDBStackName --template-body file://template.yasml --parameters file://params.json
+aws cloudformation create-stack --stack-name YourDynamoDBStackName --template-body file://template.yaml --parameters file://params.json
 
 Monitor the stack creation progress using:
 aws cloudformation describe-stacks --stack-name YourDynamoDBStackName

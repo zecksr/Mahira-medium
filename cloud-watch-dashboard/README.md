@@ -1,5 +1,4 @@
-#                                                 CloudWatch Dashboard for Monitoring EC2 Instance using Terragrunt
- CloudWatch Dashboard
+#                                                 CloudWatch Dashboard for Monitoring EC2 Instance using Terragrunt Module
 
 This repository contains Terraform and Terragrunt code to create a CloudWatch dashboard for monitoring EC2 instances. CloudWatch dashboards provide visualizations and insights into the performance and health of your AWS resources, including EC2 instances. By setting up a CloudWatch dashboard, you can easily track metrics, set up alarms, and gain real-time visibility into your infrastructure.
 
