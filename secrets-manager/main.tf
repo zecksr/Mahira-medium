@@ -1,6 +1,3 @@
-provider "aws" {
-  region = "us-east-1"  # Replace with your desired AWS region
-}
 
 resource "aws_secretsmanager_secret" "my_secret" {
   name = var.secret_name

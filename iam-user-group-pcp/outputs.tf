@@ -1,7 +1,4 @@
 #output.tf
-output "region" {
-    value = var.aws_region
-}
 output "user_name" {
     value = var.user_name
 }
