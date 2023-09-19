@@ -1,0 +1,45 @@
+version: 2.1
+
+orbs:
+  aws-terragrunt: smarshorbs/aws-terragrunt@2.2.0
+
+jobs:
+  terragrunt:
+    docker:
+      - image: alpine/terragrunt:latest
+    working_directory: ~/project
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/project
+      - run:
+          name: Install Terragrunt
+          command: |
+            TERRAGRUNT_VERSION="v0.37.3"
+            wget "https://github.com/gruntwork-io/terragrunt/releases/download/${TERRAGRUNT_VERSION}/terragrunt_linux_amd64"
+            chmod +x terragrunt_linux_amd64
+            mv terragrunt_linux_amd64 /usr/local/bin/terragrunt
+      - run:
+          name: Terragrunt init
+          command: |
+            cd infra/ec2
+            echo "Y" | terragrunt init
+
+      - run:
+          name: Terragrunt apply
+          command: |
+            cd infra/ec2
+            echo "Y" | terragrunt apply -auto-approve
+            
+      - persist_to_workspace:
+          root: .
+          paths:
+          - infra/
+        
+
+workflows:
+  master:
+   jobs:
+    - terragrunt:
+       context:
+        - terraform
