@@ -18,10 +18,10 @@ git clone https://github.com/MahiraTechnology/Mahira-medium.git
 Navigate to the environment you want to deploy (e.g., dev, prod) using Terragrunt:
 cd cloud-watch-log/log-group
 
-Initialize the Terraform working directory:
+Initialize the Terragrunt working directory:
 terragrunt init
 
-Apply the Terraform configuration to create the CloudWatch dashboard:
+Apply the Terragrunt configuration to create the CloudWatch dashboard:
 terragrunt apply
 
 When prompted, review the changes and confirm the deployment.
@@ -31,7 +31,7 @@ In the terraform files or Terragrunt configuration files, you can customize the 
 region: The AWS region where the CloudWatch dashboard will be created.
 
 Usage
-After the infrastructure has been deployed, the CloudWatch log retention policies will be in effect based on your configuration. You can customize the retention settings further by editing the Terraform files as needed.
+After the infrastructure has been deployed, the CloudWatch log retention policies will be in effect based on your configuration. You can customize the retention settings further by editing the Terragrunt files as needed.
 
 ## Cleaning Up
 To destroy the CloudWatch dashboard and associated resources, run:
