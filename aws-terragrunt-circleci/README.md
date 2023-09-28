@@ -21,7 +21,7 @@ AWS CLI installed and configured with your AWS credentials.
 
 ## Getting Started
 Clone this repository to your local machine:
-git clone https://github.com/yourusername/automated-ec2-deployment.git
+git clone https://github.com/MahiraTechnology/Mahira-medium.git
 Navigate to the project directory:
 cd automated-ec2-deployment
 Configure your AWS credentials using the AWS CLI:

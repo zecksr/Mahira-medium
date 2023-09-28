@@ -12,7 +12,7 @@ AWS Account: You must have an AWS account and configure your AWS CLI with the ne
 Follow these steps to set up health checks for your Route 53 records:
 
 Clone the Repository:
-git clone https://github.com/yourusername/terraform-s3-iam.git
+git clone https://github.com/MahiraTechnology/Mahira-medium.git
 cd route-53-health_check
 
 Update Variables:

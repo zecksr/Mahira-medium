@@ -26,7 +26,7 @@ Follow these steps to enable at-rest encryption for your AWS SNS topics:
 ### Getting Started
 
 1. Clone this repository to your local machine:
-    git clone https://github.com/yourusername/sns-encryption-terraform.git
+    git clone https://github.com/MahiraTechnology/Mahira-medium.git
 
   Change into the project directory:
     cd sns-encryption-at-rest

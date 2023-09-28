@@ -14,7 +14,7 @@ Before you begin, make sure you have the following:
 Follow these steps to create the S3 bucket and assign full access to an IAM user:
 
 1. Clone this repository to your local machine:
-   git clone https://github.com/yourusername/terraform-s3-iam.git
+   git clone https://github.com/MahiraTechnology/Mahira-medium.git
 
 Change into the project directory:
     cd iam-s3-bucket

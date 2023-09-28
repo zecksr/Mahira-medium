@@ -25,7 +25,7 @@ AWS CLI: Install the AWS Command Line Interface (CLI) and configure it with your
 
 ## Getting Started
 Clone this repository to your local machine:
-git clone https://github.com/yourusername/aws-waf-terraform.git
+git clone https://github.com/MahiraTechnology/Mahira-medium.git
 cd waf-terraform
 
 Initialize the Terraform working directory:
