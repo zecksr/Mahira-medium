@@ -22,7 +22,7 @@ AWS IAM Credentials: Ensure you have AWS IAM credentials configured with appropr
 To get started with managing S3 buckets using lifecycle rules, follow these steps:
 
 Clone this repository to your local machine:
-git clone https://github.com/yourusername/s3-lifecycle-rules.git
+git clone https://github.com/MahiraTechnology/Mahira-medium.git
 cd aws-s3/life-cycle_rule
 
 Initialize Terragrunt within the project directory:
