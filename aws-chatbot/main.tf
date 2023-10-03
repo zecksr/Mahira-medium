@@ -1,7 +1,7 @@
 #main.tf
 
 resource "aws_sns_topic" "alarm_notification_teams" {
-  name = cloudwatch-alarms-notification-teams
+  name = "cloudwatch-alarms-notification-teams"
 }
 
 resource "aws_sns_topic_subscription" "updates_sqs_target" {
