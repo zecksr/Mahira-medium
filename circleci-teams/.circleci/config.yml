@@ -1,0 +1,63 @@
+version: 2.1
+orbs:
+  ms-teams-orb: opub/ms-teams-orb@1.0.3
+  aws-ecr: circleci/aws-ecr@8.2.1
+
+jobs: 
+  build:
+    docker:
+      - image: cimg/python:3.7.9
+    working_directory: /tmp/workspace
+    environment:
+      ENV_FILE: /tmp/workspace/.circleenv
+      DOCKER_BUILDKIT: "1"
+      BUILDKIT_PROGRESS: plain    
+    steps:
+       - checkout 
+       - setup_remote_docker:
+          version: 20.10.14
+          docker_layer_caching: true
+       - attach_workspace:
+          at: /tmp/workspace         
+       
+       - run: command
+       - ms-teams-orb/report:
+          only_on_fail: false
+          webhook_url: $TEAMS_WEBHOOK_URL
+  
+  push:
+    docker:
+      - image: cimg/python:3.7.9
+    working_directory: /tmp/workspace
+    environment:
+      ENV_FILE: /tmp/workspace/.circleenv
+      DOCKER_BUILDKIT: "1"
+      BUILDKIT_PROGRESS: plain    
+    steps:
+      - checkout
+      - setup_remote_docker:
+          version: 20.10.14
+          docker_layer_caching: true 
+      - attach_workspace:
+          at: /tmp/workspace                         
+      - run:
+             name: Login to ECR
+             command: |
+                sudo apt-get update
+                sudo apt-get install -y awscli
+                eval $(aws ecr get-login --no-include-email --region ca-central-1)
+      - run:
+             name: Push Docker image to ECR
+             command: 
+               docker push 123456789.dkr.ecr.ca-central-1.amazonaws.com/python:3.7
+ 
+workflows:
+  version: 2
+  master:
+   jobs: 
+     - build:
+         context: teams
+     - push:
+        context: teams
+        requires:
+             - build
