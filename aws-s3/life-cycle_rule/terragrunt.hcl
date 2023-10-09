@@ -11,7 +11,7 @@ locals {
 }
 
 inputs = {
-  bucket = "imw-prospect-uploads"
+  bucket = "prospect-uploads"
   
     lifecycle_rule = [
     {
