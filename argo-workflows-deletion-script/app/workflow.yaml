@@ -12,5 +12,5 @@ spec:
             template: delete-workflows
     - name: delete-workflows
       container:
-        image: "12346789.dkr.ecr.ca-central-1.amazonaws.com/argo-workflows:latest"
+        image: "YOUR DELETE WORKFLOWS IMAGE"
         command: ["python", "script.py"]
